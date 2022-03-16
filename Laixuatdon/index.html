@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi xuất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let tien = parseInt(prompt("Nhập số tiền:"));
+        let laisuat = parseFloat(prompt("Nhập lãi suất 1 năm:"));
+        let nam = parseInt(prompt("Nhập số năm:"));
+        let x = parseFloat(tien + nam * laisuat);
+
+        document.write("Số tiền gửi: " + tien + " VNĐ<br/>");
+        document.write("Lãi suất: " + laisuat + " %/năm<br/>");
+        document.write("Số năm gửi: " + nam + " năm<br/>");
+        document.write("Số tiền thu về: " + x + " VNĐ");
+
+    </script>
+</body>
+</html>
