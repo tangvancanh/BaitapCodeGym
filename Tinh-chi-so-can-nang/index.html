@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+
+<body>
+    <script>
+        let chieuCao = parseFloat(prompt("Nhập chiều cao(m):"));
+        let canNang = parseFloat(prompt("Nhập cân nặng(kg):"));
+        let chiSo = canNang / (chieuCao * chieuCao);
+        if (chiSo < 16) {
+            alert("Gầy độ III");
+        } else if (16 <= chiSo && chiSo < 17) {
+            alert("Gầy độ II");
+        } else if (17 <= chiSo && chiSo < 18.5) {
+            alert("Gầy độ I");
+        } else if (18.5 <= chiSo && chiSo < 25) {
+            alert("Bình thường");
+        } else if (25 <= chiSo && chiSo < 30) {
+            alert("Thừa cân");
+        } else if (30 <= chiSo && chiSo < 35) {
+            alert("Béo phì độ 1");
+        } else if (35 <= chiSo && chiSo < 40) {
+            alert("Béo phì độ II");
+        } else if (chiSo >= 40) {
+            alert("Béo phì độ III");
+        }
+    </script>
+</body>
+
+</html>

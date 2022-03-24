@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu giá hoa quả</title>
+</head>
+
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="loaisp">
+    <button type="button" onclick="giaSp()">Xem giá</button>
+    <h2 id="h2"></h2>
+    <script>
+        function giaSp() {
+            let loaiSp = document.getElementById("loaisp").value;
+            let giaTien = document.getElementById("h2");
+            switch (loaiSp) {
+                case "Ổi":
+                case "Dưa Hấu":
+                    giaTien.innerHTML = "20.000 VNĐ/kg";
+                    break;
+                case "Táo":
+                case "Xoài":
+                    giaTien.innerHTML = "30.000 VNĐ/kg";
+                    break;
+                case "Cam":
+                case "Chôm Chôm":
+                    giaTien.innerHTML = "40.000 VNĐ/kg";
+                    break;
+                case "Măng Cụt":
+                    giaTien.innerHTML = "50.000 VNĐ/kg";
+                    break;
+                default:
+                    giaTien.innerHTML = "Không có loại quả này";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
