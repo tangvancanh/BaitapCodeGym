@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form action="" method="get">
+        Amount: <input type="number" id="tien"><br/><br/>
+        From Currency:
+        <select id="fromcurrency">
+            <option value="VietNam">VietNam</option>
+            <option value="USD">USD</option>
+        </select><br/><br/>
+        To Currency:
+        <select id="tocurrency">
+            <option value="VietNam">VietNam</option>
+            <option value="USD">USD</option>
+        </select><br/><br/>
+        <button type="button" onclick="tinh()">Convert</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        function tinh() {
+            let tien = parseFloat(document.getElementById("tien").value);
+            let fromcurrency = document.getElementById("fromcurrency").value;
+            let tocurrency = document.getElementById("tocurrency").value;
+            let VNĐ = 0,USD =0;
+            let donvi;
+
+            if (fromcurrency == "VietNam") {
+                if (tocurrency == "USD") {
+                    USD = tien / 22871;
+                    donvi = "USD";
+                }else {
+                    VNĐ = tien;
+                    donvi = "VNĐ"
+                }
+            }else {
+                if (tocurrency == "VietNam") {
+                    VNĐ = tien * 22871;
+                    donvi = "VNĐ"
+                }else {
+                    USD = tien;
+                    donvi = "USD"
+                }
+            }
+            document.getElementById("result").innerHTML = "Result: " + (VNĐ + USD) + " " + donvi;
+        }
+    </script>
+</body>
+</html>
