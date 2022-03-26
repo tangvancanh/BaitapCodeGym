@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong một tháng</title>
+</head>
+<body>
+    Nhập tháng:
+    <input type="number" id="month">
+    <button type="button" onclick="tinhsongay()">Tính số ngày</button>
+    <p id="ketqua"></p>
+    <script>
+        function tinhsongay(){
+            let month = document.getElementById("month").value;
+            let ketqua = document.getElementById("ketqua");
+            switch (month) {
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':
+                    ketqua.innerHTML = "Có 31 ngày";
+                    break;
+                case '2':
+                    ketqua.innerHTML = "Có 28 hoặc 29 ngày";
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                    ketqua.innerHTML = "Có 30 ngày";
+                    break;
+                default:
+                    ketqua.innerHTML = "Tháng không chính xác!!!";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
