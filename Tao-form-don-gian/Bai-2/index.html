@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Form đơn giản</title>
+    <style>
+        .form {
+            background-color: rgb(236, 243, 132);
+            margin: 0 auto;
+            width: 500px;
+        }
+        .form-header {
+            background-color: rgb(75, 240, 240);
+            color: blue;
+            padding: 5px;
+            margin: 7px;
+            font-size: 24px;
+        }
+        .table {
+            margin: 7px;
+            color: blue;
+        }
+        .table tr td {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get" class="form">
+        <div class="form-header">
+            <b>ĐĂNG KÝ HỌC VIÊN</b>
+        </div>
+        <table class="table">
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="datetime" name="datetime"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" value="nam">Nam
+                    <input type="radio" name="gender" value="nu">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><textarea name="address" cols="21" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select name="class" >
+                        <option value="" selected disabled>--Chọn lớp--</option>
+                        <option value="">Lớp 1</option>
+                        <option value="">Lớp 2</option>
+                        <option value="">Lớp 3</option>
+                        <option value="">Lớp 4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="number" name="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Đăng nhập">
+                    <button type="button">Đăng ký</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
