@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+
+<body>
+    <!-- <script>
+        let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for(let i=1;i<11;i++) {
+            table += "<tr>";
+            for(let j=1;j<11;j++) {
+                table = table + "<td>" + i * j + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.write(table);
+    </script> -->
+
+    <script>
+        let i = j = 1;
+        let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        while (i < 11) {
+            table += "<tr>";
+            while (j < 11) {
+                table = table + "<td>" + i * j + "</td>";
+                j++;
+            }
+            table += "</tr>";
+            j = 1;
+            i++;
+        }
+        table += "</table>";
+        document.write(table);
+    </script>
+</body>
+
+</html>

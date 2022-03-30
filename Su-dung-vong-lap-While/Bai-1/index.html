@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp While</title>
+</head>
+
+<body>
+    <script>
+        let a = 0;
+        let s = 0;
+        while (a != -1) {
+            a = Number(prompt("Nhập số: "));
+            if (a != -1) {
+                document.write(a + " + ");
+            } else {
+                document.write('(' + a + ') = ');
+            }
+            s += a;
+        }
+        document.write(s);
+    </script>
+</body>
+
+</html>

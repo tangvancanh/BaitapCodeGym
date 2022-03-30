@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game đoán số</title>
+</head>
+
+<body>
+    <button type="button" id="play" onclick="play()">Chơi</button>
+    <script>
+        function play() {
+            let min = parseInt(prompt("Nhập số nhỏ nhất:"));
+            let max = parseInt(prompt("Nhập số lớn nhất:"));
+            while (min > max) {
+                max = parseInt(prompt("Số lớn nhất không hợp lệ. Nhập lại số lớn nhất:"));
+            }
+            let keyword = Math.floor(Math.random() * (max - min + 1)) + min;
+            let guess = parseInt(prompt("Nhập số bạn dự đoán: [" + min + " - " + max + "]"));
+            let luotchoi = 2;
+            while (guess != keyword && luotchoi > 0) {
+                if (guess < keyword) {
+                    if (guess > min) {
+                        min = guess;
+                    }
+                    guess = parseInt(prompt("Bạn đoán sai. Bạn còn " + luotchoi + " lượt chơi. Đoán lại: [" + min + " - " + max + "]"));
+                } else {
+                    if (guess < max) {
+                        max = guess;
+                    }
+                    guess = parseInt(prompt("Bạn đoán sai. Bạn còn " + luotchoi + " lượt chơi. Đoán lại: [" + min + " - " + max + "]"));
+                }
+                luotchoi--;
+            }
+            if (guess == keyword) {
+                alert("Bạn đã đoán đúng số ngẫu nhiên là: " + keyword);
+            } else {
+                alert("Bạn đã hết lượt chơi!!! Số ngẫu nhiên là: " + keyword);
+            }
+            document.getElementById("play").innerHTML = "Chơi lại !!!";
+        }
+    </script>
+</body>
+
+</html>
