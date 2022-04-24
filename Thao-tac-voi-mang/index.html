@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+
+<body>
+    <h2><i>Sample Screen:</i></h2>
+    <input type="number" id="number">
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="display()">Display</button>
+    <hr width="300px" align="left">
+    <p id="result"></p>
+    <script>
+        let arr = [];
+        let result = document.getElementById("result");
+        function add() {
+            let number = document.getElementById("number").value;
+            arr.push(number);
+        }
+        function display() {
+            let string = '';
+            for (let i = 0; i < arr.length; i++) {
+                string += "Element " + i + " = " + arr[i] + "<br/>";
+            }
+            result.innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

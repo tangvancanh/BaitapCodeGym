@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+
+<body>
+    <h1>Chuyển độ F sang độ C</h1>
+    Độ F: <input type="number" id="number" onkeyup="temperatureConverter(this.value)">
+    <p>Độ C: <span id="result"></span></p>
+    <script>
+        function temperatureConverter(number) {
+            let result = (number - 32) / 1.8;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
