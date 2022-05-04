@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+
+<body>
+    <h3>
+        Dãy <span id="number"></span> số nguyên tố đầu tiên là:
+    </h3>
+    <script>
+        let number = parseInt(prompt("Nhập số"));
+        let count = 0;
+        let n = 2;
+        let check = true;
+        while (number != count) {
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check == true) {
+                document.write(n + "<br/>");
+                count++;
+            }
+            check = true;
+            n++;
+        }
+        document.getElementById("number").innerHTML = number;
+    </script>
+</body>
+
+</html>
