@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị lớn nhất hoặc nhỏ nhất</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        let quantity = 10;
+
+        for (let i = 0; i < quantity; i++) {
+            arr.push([]);
+            for (let j = 0; j < quantity; j++) {
+                arr[i].push(parseInt(Math.random() * 99 + 1));
+            }
+        }
+
+        let table = "<table width = '500px'>";
+        for (let i = 0; i < quantity; i++) {
+            table += "<tr>";
+            for (let j = 0; j < 10; j++) {
+                table += "<td>" + arr[i][j] + "</td>";
+            }
+            table += "</tr>";
+        }
+
+        function findMin(arr) {
+            let min = arr[0][0];
+            for (let i = 0; i < quantity; i++) {
+                for (let j = 0; j < quantity; j++) {
+                    if (arr[i][j] < min) {
+                        min = arr[i][j];
+                    }
+                }
+            }
+            return min;
+        }
+
+        function findMax(arr) {
+            let max = arr[0][0];
+            for (let i = 0; i < 10; i++) {
+                for (let j = 0; j < 10; j++) {
+                    if (arr[i][j] > max) {
+                        max = arr[i][j];
+                    }
+                }
+            }
+            return max;
+        }
+        document.write("Giá trị MIN trong mảng là: " + findMin(arr) + "<br/><br/>");
+        document.write("Giá trị MAX trong mảng là: " + findMax(arr) + "<br/><br/>");
+        document.write("Mảng:<br/><br/>");
+        document.write(table);
+    </script>
+</body>
+
+</html>
