@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm</title>
+</head>
+
+<body>
+    <script>
+        let one = parseFloat(prompt("Nhập tham số thứ 1:"));
+        let two = parseFloat(prompt("Nhập tham số thứ 2:"));
+
+        function check(one, two) {
+            while (one > two) {
+                alert("Tham số thứ 1 lớn hơn tham số thứ 2.");
+                two = parseFloat(prompt("Nhập tham số thứ 2:"));
+            }
+            document.write(one + " + " + two + " = " + (one + two));
+        }
+
+        check(one, two);
+    </script>
+</body>
+
+</html>

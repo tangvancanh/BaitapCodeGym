@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm</title>
+</head>
+
+<body>
+    <script>
+        let string = '';
+        function tinhGiaiThua(number) {
+            let s = 1;
+            for (let i = number; i > 0; i--) {
+                if (i == 1) {
+                    string += i;
+                } else {
+                    string += i + " x ";
+                }
+                s = s * i;
+            }
+            document.write("Giai thừa của số " + number + " là: " + number + "! = " + string + " = " + s);
+        }
+
+        let number = parseInt(prompt("Nhập số bạn muốn tính giai thừa:"));
+        tinhGiaiThua(number)
+    </script>
+</body>
+
+</html>

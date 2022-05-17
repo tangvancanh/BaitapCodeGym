@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm</title>
+</head>
+
+<body>
+    <script>
+        function checkNumber(str) {
+            var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+            for (let i = 0; i < str.length; i++) {
+                let check = false;
+                for (let j = 0; j < array.length; j++) {
+                    if (parseInt(str[i]) == array[j]) {
+                        check = true;
+                        break;
+                    }
+                }
+                if (check == false) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        while (true) {
+            let str = prompt('Nhập thông tin:');
+            alert((checkNumber(str)) ? 'Là một số nguyên' : 'Không phải số nguyên');
+        }
+    </script>
+</body>
+
+</html>

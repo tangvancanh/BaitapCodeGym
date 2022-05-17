@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm</title>
+</head>
+
+<body>
+    <script>
+        function check(str, key) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] == key) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        let str = prompt("Nhập mảng ký tự:");
+        let key = prompt("Nhập ký tự cần tìm:");
+
+        if (check(str, key) == 0) {
+            document.write("Trong mảng ký tự '" + str + "' không có ký tự '" + key + "' : -1");
+        } else {
+            document.write("Trong mảng ký tự '" + str + "' có: " + check(str, key) + " ký tự '" + key + "'");
+        }
+    </script>
+</body>
+
+</html>
